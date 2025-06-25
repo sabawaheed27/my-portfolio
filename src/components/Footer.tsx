@@ -25,7 +25,7 @@ export default function Footer() {
           <FaGithub />
         </motion.a>
         <motion.a
-          href="https://www.linkedin.com/in/saba-waheed/"
+          href="https://www.linkedin.com/in/saba-waheed-0bb188367/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, rotate: -10 }}
