@@ -2,41 +2,13 @@
 "use client";
 import { motion } from "framer-motion";
 
-// const projects = [
-//   {
-//     title: 'styled-todo-app',
-//     description: 'A task A responsive and clean Todo List application built using React and TypeScript. This project demonstrates the use of Styled Components for styling and browser localStorage for persistent state management. Features include adding, editing, deleting, and toggling tasks, with responsive design and clean code architecture.',
-//     link: 'https://styled-todo-app.vercel.app/',
-//     github: 'git@github.com:sabawaheed27/styled-todo-app.git',
-//   },
-//   {
-//     title: 'next-ts-fact-fetcher',
-//     description: 'Single-page app that fetches and displays random fun facts with a stylish SCSS layout',
-//     link: 'https://next-ts-fact-fetcher.vercel.app/',
-//     github: 'git@github.com:sabawaheed27/next-ts-fact-fetcher.git',
-//   },
-//   {
-//     title: 'aussie-animal-atlas',
-//     description: 'Find random A React-powered zoo explorer showcasing mammals, birds, and reptiles. Built with React Router, conditional rendering, and responsive design principles.recipes using an API',
-//     link: 'https://https://zoo-assignment.vercel.app/-recipe-demo.com',
-//     github: 'https://https://github.com/sabawaheed27/aussie-animal-atlas.git.com',
-//   },
-//   {
-//     title: 'React-API-Fetching',
-//     description: 'Find random recipes using an API',
-//     link: 'https://react-api-fetching-oxll.vercel.app/',
-//     github: 'git@github.com:sabawaheed27/React-API-Fetching.git',
-//   },
-// ];
-
-
 
 const projects = [
   {
-    title: 'styled-todo-app',
-    description: 'A responsive and clean Todo List application built using React and TypeScript. This project demonstrates the use of Styled Components for styling and browser localStorage for persistent state management. Features include adding, editing, deleting, and toggling tasks, with responsive design and clean code architecture.',
-    link: 'https://styled-todo-app.vercel.app/',
-    github: 'https://github.com/sabawaheed27/styled-todo-app',
+    title: 'mealmate',
+    description: 'MealMate is a recipe discovery web app built with Next.js 15, TypeScript, and Tailwind CSS. It fetches data from TheMealDB API and lets users browse categories, view recipe details, and explore new meals.',
+    link: 'https://mealmate-pied.vercel.app/',
+    github: 'https://git@github.com:sabawaheed27/mealmate.git',
   },
   {
     title: 'next-ts-fact-fetcher',
