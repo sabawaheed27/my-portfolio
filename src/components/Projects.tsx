@@ -8,7 +8,7 @@ const projects = [
     title: 'mealmate',
     description: 'MealMate is a recipe discovery web app built with Next.js 15, TypeScript, and Tailwind CSS. It fetches data from TheMealDB API and lets users browse categories, view recipe details, and explore new meals.',
     link: 'https://mealmate-pied.vercel.app/',
-    github: 'https://git@github.com:sabawaheed27/mealmate.git',
+    github: 'https://github.com/sabawaheed27/mealmate',
   },
   {
     title: 'next-ts-fact-fetcher',
