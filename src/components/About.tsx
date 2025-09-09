@@ -5,7 +5,7 @@ export default function About() {
       <div className="max-w-2xl mx-auto text-center">
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
         <p className="text-gray-700 dark:text-gray-300 text-lg">
-          I'm a frontend developer passionate about building beautiful, responsive web applications. I specialize in React, TypeScript, and Tailwind CSS. Always learning and improving!
+          I&apos;m a frontend developer passionate about building beautiful, responsive web applications. I specialize in React, TypeScript, and Tailwind CSS. Always learning and improving!
         </p>
       </div>
     </section>
