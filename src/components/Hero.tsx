@@ -1,45 +1,66 @@
 
 "use client";
-
-import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Hero() {
+function ProfileImage() {
   return (
-    <motion.section 
-      id="hero"
-      initial={{ opacity: 0, y: 50 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 1 }}
-      className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-gray-800 dark:via-gray-900 dark:to-black px-4">
-      <motion.img
-        src="/saba.jpg"
-        alt="Saba profile"
-        className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover mb-6 border-4 border-white dark:border-gray-700"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}/>
-      <motion.h2 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
-        Hi, I&apos;m Saba
-      </motion.h2>
+    <img
+      src="/saba.jpg"
+      alt="Saba profile"
+      className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white dark:border-gray-700"/>
+  );
+}
 
-      <TypeAnimation
-        sequence={[
-          "Frontend Developer",
-          2000,
-          "Creative Thinker",
-          2000,
-          "UI/UX Enthusiast",
-          2000,
-        ]}
-        wrapper="span"
-        speed={50}
-        repeat={Infinity}
-        className="text-md sm:text-lg md:text-2xl text-gray-700 dark:text-gray-300"/>
-    </motion.section>
+function StatusIndicator({ status }: { status: string }) {
+  return (
+    <div className="flex items-center space-x-2">
+      <span className="w-3 h-3 rounded-full bg-green-500"></span>
+      <span className="text-sm text-gray-600 dark:text-gray-300">{status}</span>
+    </div>
+  );
+}
+
+export default function HeroBanner() {
+  return (
+    <section className="w-full md:w-3/4 lg:w-2/3 py-16 mx-auto flex flex-col items-start">
+      {/* Profile */}
+      <div className="pb-6">
+        <ProfileImage />
+      </div>
+
+      {/* Text Content */}
+      <div className="space-y-4 md:space-y-3 py-6">
+        <StatusIndicator status="Available for Work" />
+
+        <h1 className="font-jet text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter dark:text-white">
+          Saba Waheed
+        </h1>
+
+        <h2 className="font-jet text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight dark:text-gray-200">
+          Frontend Developer
+        </h2>
+
+        <p className="text-sm md:text-lg text-[#767676] max-w-xl md:max-w-2xl py-2 leading-6">
+          I’m a web development student passionate about building creative and
+          user-friendly applications. With a background in design and a strong
+          eye for detail, I enjoy transforming ideas into clean and responsive
+          digital experiences.
+        </p>
+
+        <TypeAnimation
+          sequence={[
+            "Next Enthusiast",
+            2000,
+            "Creative Problem Solver",
+            2000,
+            "Always Learning",
+            2000,
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          className="block text-md sm:text-lg md:text-xl text-gray-700 dark:text-gray-300"/>
+      </div>
+    </section>
   );
 }

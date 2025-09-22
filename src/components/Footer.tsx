@@ -4,9 +4,22 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scrolling
+    });
+  };
+
   return (
     <footer className="py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-      <a href="#hero" className="block mb-4 text-blue-500 hover:underline">⬆ Back to Top</a>
+      <button
+        onClick={scrollToTop}
+        className="block mb-4 text-blue-500 hover:underline"
+      >
+        ⬆ Back to Top
+      </button>
+
       <motion.div
         className="flex justify-center space-x-4 mb-3"
         initial="hidden"
@@ -35,6 +48,7 @@ export default function Footer() {
           <FaLinkedin />
         </motion.a>
       </motion.div>
+
       © {new Date().getFullYear()} Saba. All rights reserved.
     </footer>
   );
