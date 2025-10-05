@@ -14,8 +14,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <body className="bg-black text-white transition-colors duration-300 text-sm md:text-base">
         <Header />
-        <main className="px-4 sm:px-6 md:px-16 py-4 md:py-8">{children}</main>
-        <Footer />
+      <main className="px-4 sm:px-6 md:px-16 py-4 md:py-8">{children}</main>
+
       </body>
     </html>
   );

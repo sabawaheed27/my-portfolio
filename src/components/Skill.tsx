@@ -13,18 +13,21 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-16 bg-black">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-3xl font-bold mb-8">Skills</h3>
+   
+      <div className="max-w-4xl mx-auto mt-20 text-center">
+        <h2 className="text-3xl font-bold mb-8">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 justify-center">
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index}>
               {skill.icon}
-              <span className="mt-2 text-gray-700 dark:text-gray-300">{skill.name}</span>
+              <span>{skill.name}</span>
             </div>
           ))}
         </div>
       </div>
-    </section>
+
+
+      
+   
   );
 }
