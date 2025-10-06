@@ -96,8 +96,9 @@ export default function Projects() {
                   className=" h-full object-cover" />
                 <div className="absolute inset-0 opacity-0 hover:opacity-100 flex items-center justify-center transition">
                   <a
-
+                    href={project.link}
                     target="_blank"
+                     rel="noopener noreferrer"
                     className="px-5 py-2 bg-black text-white rounded-lg flex items-center gap-2 hover:bg-gray-800 transition">
                     <ExternalLink size={16} /> Live Site
                   </a>
