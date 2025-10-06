@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import type { ReactNode } from 'react';
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "My Portfolio",
   description:
