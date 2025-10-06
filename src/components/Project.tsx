@@ -6,7 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/autoplay"; 
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const projects = [
   {
@@ -16,30 +17,32 @@ const projects = [
     image: "/images/mealmate.png",
   },
   {
+    title: "API-Project",
+    link: "https://api-project-steel.vercel.app/",
+    github: "https://github.com/sabawaheed27/API-Project.git",
+    image: "/images/flags.png",
+  },
+  {
     title: "npm-Multipage-website",
     link: "https://npm-multipage-website.vercel.app/",
     github: "https://github.com/sabawaheed27/npm-Multipage-website.git",
     image: "/images/travelguide.png",
   },
+
   {
     title: "Aussie Animal Atlas",
     link: "https://zoo-assignment.vercel.app/",
     github: "https://github.com/sabawaheed27/aussie-animal-atlas",
     image: "/images/aussie-atlas.png",
+  },   {
+    title: "Frontend_hangman",
+    link: "https://frontend-hangman.vercel.app/",
+    github: "https://github.com/sabawaheed27/Frontend_hangman.git",
+    image: "/images/hangman.png",
   },
 
-  {
-  title: "API-Project",
-  link: "https://api-project-steel.vercel.app/",
-  github: "https://github.com/sabawaheed27/API-Project.git",
-  image: "/images/flags.png",
-},
-{
-  title: "Frontend_hangman",
-  link: "https://frontend-hangman.vercel.app/",
-  github: "https://github.com/sabawaheed27/Frontend_hangman.git",
-  image: "/images/hangman.png",
-},
+
+ 
 ];
 
 export default function Projects() {
@@ -71,7 +74,7 @@ export default function Projects() {
 
       {/* Swiper Slider */}
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         breakpoints={{
@@ -80,6 +83,12 @@ export default function Projects() {
 
         pagination={{ clickable: true }}
         loop
+          autoplay={{
+          delay: 3000, // 3 seconds between slides
+          disableOnInteraction: false,
+           // keeps auto-play after manual navigation
+        }} 
+        speed={1000 }
         className="pb-12">
         {projects.map((project, i) => (
           <SwiperSlide key={i}>
@@ -88,17 +97,20 @@ export default function Projects() {
               className="relative overflow-hidden ">
               {/* Image */}
               <div className="relative h-56 sm:h-64 md:h-72 lg:h-80">
-                <h3 className="text-xl sm:text-2xl md:text-3xl mb-4 font-bold text-white">{project.title}</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl mb-4 font-bold text-white">
+                  {project.title}</h3>
 
                 <img
                   src={project.image}
                   alt={project.title}
                   className=" h-full object-cover" />
+                  
+                {/* Hover overlay */}
                 <div className="absolute inset-0 opacity-0 hover:opacity-100 flex items-center justify-center transition">
                   <a
                     href={project.link}
                     target="_blank"
-                     rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                     className="px-5 py-2 bg-black text-white rounded-lg flex items-center gap-2 hover:bg-gray-800 transition">
                     <ExternalLink size={16} /> Live Site
                   </a>
